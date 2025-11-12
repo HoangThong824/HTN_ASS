@@ -17,6 +17,7 @@ String mainPage()
 {
   float temperature = glob_temperature;
   float humidity = glob_humidity;
+  float light = glob_light;
   String led1 = led1_state ? "ON" : "OFF";
   String led2 = led2_state ? "ON" : "OFF";
 
@@ -119,6 +120,10 @@ String mainPage()
       <div class="sensor">
         💧 Độ ẩm: <span id="hum">)rawliteral" +
          String(humidity) + R"rawliteral(</span> %
+      </div>
+      <div class="sensor">
+        🌞 Ánh sáng: <span id="light">)rawliteral" +
+         String(light) + R"rawliteral(</span> lx
       </div>
 
       <div>
@@ -304,7 +309,8 @@ void handleToggle() {
 void handleSensors() {
   float t = glob_temperature;
   float h = glob_humidity;
-  String json = "{\"temp\":"+String(t)+",\"hum\":"+String(h)+"}";
+  float l = glob_light;
+  String json = "{\"temp\":"+String(t)+",\"hum\":"+String(h)+",\"light\":"+String(l)+"}";
   server.send(200, "application/json", json);
 }
 
