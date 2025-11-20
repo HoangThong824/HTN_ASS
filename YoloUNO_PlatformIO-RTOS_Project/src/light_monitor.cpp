@@ -10,8 +10,9 @@ void light_monitor(void* pvParameters){
         glob_light = sensorValue;
         // In ra gia tri anh sang
         Serial.print("Light: ");
-        Serial.println(sensorValue); // In voi 2 chu so thap phan
-        
+        Serial.print(sensorValue); // In voi 2 chu so thap phan
+        Serial.println("lx");
+
         glob_light = sensorValue;
         vTaskDelay(5000); 
     }
