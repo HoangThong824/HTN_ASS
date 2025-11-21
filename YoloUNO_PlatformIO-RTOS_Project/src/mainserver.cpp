@@ -6,6 +6,14 @@ bool led1_state = false;
 bool led2_state = false;
 bool isAPMode = true;
 
+Preferences prefs;
+
+struct ServerConfig {
+  String type = "coreiot";          // coreiot hoặc custom
+  String token_url = "sclh3zy0qywsr4ruznjq";
+  uint32_t cycle_ms = 10000;
+} serverConfig;
+
 WebServer server(80);
 
 

@@ -2,5 +2,6 @@
     "idf.portWin": "COM12",
     "idf.openOcdConfigs": [
         "board/esp32s3-bridge.cfg"
-    ]
+    ],
+    "cmake.sourceDirectory": "C:/Users/ADMIN/Documents/HK251/HTN/HTN_ASS/YoloUNO_PlatformIO-RTOS_Project/YoloUNO_PlatformIO-RTOS_Project/lib/ArduinoJson/src"
 }
