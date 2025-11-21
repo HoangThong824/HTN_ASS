@@ -1,5 +1,4 @@
-#include "coreiot.h"
-
+#include <coreiot.h>
 // ----------- CONFIGURE THESE! -----------
 const char* coreIOT_Server = "app.coreiot.io";  
 const char* coreIOT_Token = "sclh3zy0qywsr4ruznjq";   // Device Access Token
@@ -118,6 +117,6 @@ void coreiot_task(void *pvParameters){
         client.publish("v1/devices/me/telemetry", payload.c_str());
 
         Serial.println("Published payload: " + payload);
-        vTaskDelay(10000);  // Publish every 10 seconds
+        vTaskDelay(pdMS_TO_TICKS(publish_interval_ms));  // Publish every 10 seconds
     }
 }

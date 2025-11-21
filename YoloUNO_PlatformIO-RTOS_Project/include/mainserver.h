@@ -4,6 +4,8 @@
 #include <WiFi.h>
 #include <WebServer.h>
 #include "global.h"
+#include <ElegantOTA.h>        // <<< THÊM DÒNG NÀY
+#include <Preferences.h>      // Để lưu cấu hình nhớ sau reset
 
 #define LED1_PIN 48
 #define LED2_PIN 41

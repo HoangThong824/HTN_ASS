@@ -10,6 +10,8 @@
 extern float glob_temperature;
 extern float glob_humidity;
 extern float glob_light;
+extern uint32_t publish_interval_ms;
+extern SemaphoreHandle_t lcdMutex;
 
 extern String ssid;
 extern String password;
